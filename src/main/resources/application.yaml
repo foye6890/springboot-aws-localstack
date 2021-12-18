@@ -1,0 +1,25 @@
+sqs:
+  queue: test-queue
+
+localstack:
+#  sns:
+#    url: http://localhost:4575
+  sqs:
+    url: http://localhost:4566
+
+cloud:
+  aws:
+    credentials:
+      accessKey: dummy
+      secretKey: dummy
+      instanceProfile: false
+    region:
+      static: us-east-1
+    stack:
+      auto: false
+logging:
+  level:
+    com:
+      amazonaws:
+        util:
+          EC2MetadataUtils: error
